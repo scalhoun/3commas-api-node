@@ -177,6 +177,12 @@ class threeCommasAPI {
     return await this.makeRequest('POST', `/public/api/ver1/smart_trades/${smart_trade_id}/force_process?`, { smart_trade_id })
   }
 
+  async smartTradesAddFunds(params) {
+    return await this.makeRequest('POST', `/public/api/ver1/smart_trades/${params.smart_trade_id}/add_funds?`, params)
+  }
+
+
+
   /**
    * Accounts methods
    */
